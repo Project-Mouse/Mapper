@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import CoreLocation
+
+struct LocationData: Identifiable {
+    let id: UUID = UUID()
+    let timestamp: Date
+    let latitude: CLLocationDegrees
+    let longitude: CLLocationDegrees
+    var altitude: Double // Add altitude property
+    
+    var description: String {
+            return "Latitude: \(latitude), Longitude: \(longitude)"
+        }
+}
